@@ -2,6 +2,9 @@ const { expect, assert } = require("chai");
 const { parseEther, formatEther, formatUnits, parseUnits, formatBytes32String, keccak256, id } = require("ethers/lib/utils");
 const { ethers } = require("hardhat");
 
+require('dotenv').config();
+const { ALCHEMY_API_KEY, KOVAN_PRIVATE_KEY } = process.env;
+
 let caller;
 let account2;
 let account3;
@@ -41,7 +44,7 @@ beforeEach(async function () {
   const wethToken  = "0xd0A1E359811322d97991E03f863a0C30C2cF029C"; // Kovan WETH
 
   const provider = ethers.getDefaultProvider("kovan", {
-    alchemyapi: "<ALCHEMY_API_KEY>",
+    alchemyapi: ALCHEMY_API_KEY,
     });
 
   const wallet = ethers.Wallet.createRandom();

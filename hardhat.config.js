@@ -1,6 +1,9 @@
 require("@nomiclabs/hardhat-waffle");
 require('@nomiclabs/hardhat-ethers');
 
+require('dotenv').config();
+const { ALCHEMY_API_KEY, KOVAN_PRIVATE_KEY } = process.env;
+
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -10,19 +13,6 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     console.log(account.address);
   }
 });
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
-
-// Go to https://www.alchemyapi.io, sign up, create
-// a new App in its dashboard, and replace "KEY" with its key
-const ALCHEMY_API_KEY = "<ALCHEMY_API_KEY>";
-
-// Replace this private key with your Kovan account private key
-// To export your private key from Metamask, open Metamask and
-// go to Account Details > Export Private Key
-// Be aware of NEVER putting real Ether into testing accounts
-const KOVAN_PRIVATE_KEY = "<KOVAN_PRIVATE_KEY>";
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
