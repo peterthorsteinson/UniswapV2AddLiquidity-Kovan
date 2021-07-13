@@ -2,6 +2,7 @@ require("@nomiclabs/hardhat-waffle");
 require('@nomiclabs/hardhat-ethers');
 
 require('dotenv').config();
+
 const { ALCHEMY_API_KEY, KOVAN_PRIVATE_KEY } = process.env;
 
 // This is a sample Hardhat task. To learn how to create your own go to

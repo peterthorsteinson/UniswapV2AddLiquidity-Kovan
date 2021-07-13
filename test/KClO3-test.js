@@ -3,6 +3,7 @@ const { parseEther, formatEther, formatUnits, parseUnits, formatBytes32String, k
 const { ethers } = require("hardhat");
 
 require('dotenv').config();
+
 const { ALCHEMY_API_KEY, KOVAN_PRIVATE_KEY } = process.env;
 
 let caller;
