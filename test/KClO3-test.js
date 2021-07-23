@@ -121,3 +121,4 @@ describe("KClO3 Add Liquidity", function () { // Error: insufficient funds for i
    });
 
 });
+// You need to define the transaction to have it work, otherwise, your code works fine.
